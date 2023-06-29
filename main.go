@@ -68,7 +68,11 @@ func main() {
 				ID        int    `json:"id"`
 				FirstName string `json:"first_name"`
 				LastName  string `json:"last_name"`
-			}{},
+			}{
+				ID:        1,
+				FirstName: "georgi",
+				LastName:  "dimov",
+			},
 		},
 		{
 			ID:              2,
@@ -107,6 +111,170 @@ func main() {
 				LastName  string `json:"last_name"`
 			}{
 				ID:        0,
+				FirstName: "",
+				LastName:  "",
+			},
+		},
+		{
+			ID:              3,
+			Name:            "Rental 2",
+			Description:     "Description of Rental 2",
+			Type:            "",
+			Make:            "",
+			Model:           "",
+			Year:            0,
+			Length:          0,
+			Sleeps:          0,
+			PrimaryImageURL: "",
+			Price: struct {
+				Day int `json:"day"`
+			}{
+				Day: 0,
+			},
+			Location: struct {
+				City    string  `json:"city"`
+				State   string  `json:"state"`
+				Zip     string  `json:"zip"`
+				Country string  `json:"country"`
+				Lat     float64 `json:"lat"`
+				Lng     float64 `json:"lng"`
+			}{
+				City:    "",
+				State:   "",
+				Zip:     "",
+				Country: "",
+				Lat:     0,
+				Lng:     0,
+			},
+			User: struct {
+				ID        int    `json:"id"`
+				FirstName string `json:"first_name"`
+				LastName  string `json:"last_name"`
+			}{
+				ID:        0,
+				FirstName: "",
+				LastName:  "",
+			},
+		},
+		{
+			ID:              4,
+			Name:            "Rental 2",
+			Description:     "Description of Rental 2",
+			Type:            "",
+			Make:            "",
+			Model:           "",
+			Year:            0,
+			Length:          0,
+			Sleeps:          0,
+			PrimaryImageURL: "",
+			Price: struct {
+				Day int `json:"day"`
+			}{
+				Day: 0,
+			},
+			Location: struct {
+				City    string  `json:"city"`
+				State   string  `json:"state"`
+				Zip     string  `json:"zip"`
+				Country string  `json:"country"`
+				Lat     float64 `json:"lat"`
+				Lng     float64 `json:"lng"`
+			}{
+				City:    "",
+				State:   "",
+				Zip:     "",
+				Country: "",
+				Lat:     0,
+				Lng:     0,
+			},
+			User: struct {
+				ID        int    `json:"id"`
+				FirstName string `json:"first_name"`
+				LastName  string `json:"last_name"`
+			}{
+				ID:        0,
+				FirstName: "",
+				LastName:  "",
+			},
+		},
+		{
+			ID:              5,
+			Name:            "Rental 2",
+			Description:     "Description of Rental 2",
+			Type:            "",
+			Make:            "",
+			Model:           "",
+			Year:            0,
+			Length:          0,
+			Sleeps:          0,
+			PrimaryImageURL: "",
+			Price: struct {
+				Day int `json:"day"`
+			}{
+				Day: 0,
+			},
+			Location: struct {
+				City    string  `json:"city"`
+				State   string  `json:"state"`
+				Zip     string  `json:"zip"`
+				Country string  `json:"country"`
+				Lat     float64 `json:"lat"`
+				Lng     float64 `json:"lng"`
+			}{
+				City:    "",
+				State:   "",
+				Zip:     "",
+				Country: "",
+				Lat:     0,
+				Lng:     0,
+			},
+			User: struct {
+				ID        int    `json:"id"`
+				FirstName string `json:"first_name"`
+				LastName  string `json:"last_name"`
+			}{
+				ID:        0,
+				FirstName: "",
+				LastName:  "",
+			},
+		},
+		{
+			ID:              6,
+			Name:            "Rental 2",
+			Description:     "Description of Rental 2",
+			Type:            "",
+			Make:            "",
+			Model:           "",
+			Year:            0,
+			Length:          0,
+			Sleeps:          0,
+			PrimaryImageURL: "",
+			Price: struct {
+				Day int `json:"day"`
+			}{
+				Day: 6,
+			},
+			Location: struct {
+				City    string  `json:"city"`
+				State   string  `json:"state"`
+				Zip     string  `json:"zip"`
+				Country string  `json:"country"`
+				Lat     float64 `json:"lat"`
+				Lng     float64 `json:"lng"`
+			}{
+				City:    "",
+				State:   "",
+				Zip:     "",
+				Country: "",
+				Lat:     0,
+				Lng:     0,
+			},
+			User: struct {
+				ID        int    `json:"id"`
+				FirstName string `json:"first_name"`
+				LastName  string `json:"last_name"`
+			}{
+				ID:        6,
 				FirstName: "",
 				LastName:  "",
 			},
