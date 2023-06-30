@@ -8,6 +8,12 @@ import (
 	"strings"
 )
 
+
+const (
+	earthRadiusKm = 6371.0 
+	nearThreshold = 100.0   // Threshold distance in kilometers for considering locations as "near"
+)
+
 type Rental struct {
 	ID              int     `json:"id"`
 	Name            string  `json:"name"`
@@ -425,6 +431,24 @@ func containsID(ids []int, id int) bool {
 }
 
 func isNear(lat1, lng1, lat2, lng2 float64) bool {
-	// Implement distance calculation logic here to determine if two locations are near
-	return true
+	lat1Rad := degreesToRadians(lat1)
+	lng1Rad := degreesToRadians(lng1)
+	lat2Rad := degreesToRadians(lat2)
+	lng2Rad := degreesToRadians(lng2)
+
+	deltaLat := lat2Rad - lat1Rad
+	deltaLng := lng2Rad - lng1Rad
+
+	// Calculate the Haversine distance
+	a := math.Pow(math.Sin(deltaLat/2), 2) + math.Cos(lat1Rad)*math.Cos(lat2Rad)*math.Pow(math.Sin(deltaLng/2), 2)
+	c := 2 * math.Atan2(math.Sqrt(a), math.Sqrt(1-a))
+	distance := earthRadiusKm * c
+
+	// Check if the distance is within the threshold
+	return distance <= nearThreshold
+}
+
+
+func degreesToRadians(deg float64) float64 {
+	return deg * (math.Pi / 180)
 }
